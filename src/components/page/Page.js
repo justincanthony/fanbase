@@ -12,13 +12,13 @@ export const Page = () => {
 
 	const handleChange = (artist) => {
 		fetchArtist(artist)
-			.then((data) => console.log(data))
-			// .then((data) => setArtistInfo(data.data))
+			.then((data) => setArtistInfo(data))
 			.catch((err) => setError(err.message));
 	};
 
 	return (
-		<div className="app">
+		<div className="App">
+			{/* {console.log(artistInfo)}x */}
 			<Navbar handleChange={handleChange} />
 			<ArtistInfoContainer artistInfo={artistInfo} />
 			{/* <Footer /> */}
