@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
+// import { handleChange }
 import './SearchComponent.css';
 
 export const SearchComponent = () => {
 	const [artist, setArtist] = useState('');
 
-	useEffect(() => {}, [artist]);
+	useEffect(() => {
+		handleChange(artist);
+	}, [artist]);
 
 	return (
 		<div className="searchBar">
