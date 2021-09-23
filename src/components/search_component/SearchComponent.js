@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-// import { handleChange }
 import './SearchComponent.css';
 
-export const SearchComponent = () => {
+export const SearchComponent = ({ handleChange }) => {
 	const [artist, setArtist] = useState('');
 
 	useEffect(() => {
