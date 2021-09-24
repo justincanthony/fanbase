@@ -13,10 +13,6 @@ export const Page = () => {
   const [artistError, setArtistError] = useState('');
   const [concertsError, setConcertsError] = useState('');
 
-  const handleClick = (concert) => {
-    setSavedConcerts([...savedConcerts, concert]);
-  };
-
   const handleChange = (artist) => {
     fetchArtist(artist)
       .then((data) => setArtistInfo(data))
