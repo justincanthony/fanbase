@@ -1,11 +1,9 @@
 import React from 'react';
 import './ConcertCard.css';
-import { Link } from 'react-router-dom';
 
 export const ConcertCard = ({ concert, handle }) => {
   const handleClick = (concert) => {
     localStorage.setItem(concert.id, JSON.stringify(concert));
-    console.log(concert);
   };
 
   return (
