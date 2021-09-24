@@ -14,7 +14,7 @@ export const Page = () => {
   const [concertsError, setConcertsError] = useState('');
 
   const handleClick = (concert) => {
-    setSavedConcerts(...savedConcerts, concert);
+    setSavedConcerts([...savedConcerts, concert]);
   };
 
   const handleChange = (artist) => {
