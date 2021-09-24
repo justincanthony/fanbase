@@ -3,18 +3,27 @@
   width: 100%;
   display: flex;
   flex-direction: row;
+  background-color: rgb(199, 199, 199);
 }
 
 img {
- height: 100%
+ height: 100%;
+ border-radius: 50%;
+
 }
 
+.bandImageWrapper {
+  margin: 10px;
+}
 
+.artistDetails {
+display: flex;
+flex-direction: column;
+justify-content: center; 
+}
 
 .artistName {
   text-align: center;
 }
 
-.artistDetails {
 
-}
