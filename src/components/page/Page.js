@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Switch, Route } from 'react-router-dom';
 import './Page.css';
 import { Navbar } from '../navbar/Navabar';
 import { ArtistInfoContainer } from '../artist_info_container/ArtistInfoContainer';
@@ -27,11 +28,30 @@ export const Page = () => {
     <main className="main">
       {/* {console.log(artistInfo)}x */}
       <Navbar handleChange={handleChange} />
-      <section className="pageContainer">
-        <ArtistInfoContainer artistInfo={artistInfo} />
-        <ConcertContainer concerts={concerts} />
-        <SavedEventsContainer />
-      </section>
+      <Route
+        exact
+        path="/artist_info"
+        render={() => {
+          return (
+            <section className="pageContainer">
+              <ArtistInfoContainer artistInfo={artistInfo} />
+              <ConcertContainer concerts={concerts} />
+            </section>
+          );
+        }}
+      />
+      <Route
+        exact
+        path="/saved_events"
+        render={() => {
+          return (
+            <section className="pageContainer">
+              <ArtistInfoContainer artistInfo={artistInfo} />
+              <SavedEventsContainer />
+            </section>
+          );
+        }}
+      />
       {/* <Footer /> */}
     </main>
   );
