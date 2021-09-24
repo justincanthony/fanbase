@@ -9,8 +9,13 @@ import { ConcertContainer } from '../concert_container/ConcertContainer';
 export const Page = () => {
   const [artistInfo, setArtistInfo] = useState({});
   const [concerts, setConcerts] = useState([]);
+  const [savedConcerts, setSavedConcerts] = useState([]);
   const [artistError, setArtistError] = useState('');
   const [concertsError, setConcertsError] = useState('');
+
+  const handleClick = (concert) => {
+    setSavedConcerts(...savedConcerts, concert);
+  };
 
   const handleChange = (artist) => {
     fetchArtist(artist)
