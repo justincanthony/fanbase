@@ -7,14 +7,11 @@ export const SavedEventsContainer = () => {
 
   const getFromStorage = () => {
     const keys = Object.keys(localStorage);
+    let savedEvents;
     if (keys.length) {
-      keys.forEach((key) => {
-        setSavedConcerts([
-          ...savedConcerts,
-          JSON.parse(localStorage.getItem(key)),
-        ]);
-      });
+      savedEvents = keys.map((key) => JSON.parse(localStorage.getItem(key)));
     }
+    setSavedConcerts([...savedEvents]);
   };
 
   useEffect(() => {
@@ -24,9 +21,9 @@ export const SavedEventsContainer = () => {
   const savedEvents = savedConcerts.map((concert) => (
     <ConcertCard key={concert} concert={concert} />
   ));
+
   return (
     <section className="savedConcertContainer">
-      {/* {savedEvents < 1 && <Error message={`Lets Find Some Shows!`} />} */}
       {savedEvents && savedEvents}
     </section>
   );
