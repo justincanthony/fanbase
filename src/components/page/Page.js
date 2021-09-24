@@ -10,7 +10,6 @@ import { SavedEventsContainer } from '../saved_events_container/SavedEventsConta
 export const Page = () => {
   const [artistInfo, setArtistInfo] = useState({});
   const [concerts, setConcerts] = useState([]);
-  const [savedConcerts, setSavedConcerts] = useState([]);
   const [artistError, setArtistError] = useState('');
   const [concertsError, setConcertsError] = useState('');
 
