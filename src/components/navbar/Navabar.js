@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { SearchComponent } from '../search_component/SearchComponent';
 import './Navbar.css';
 
-export const Navbar = () => {
+export const Navbar = ({ handleChange }) => {
 	return (
 		<header className="navbar">
 			<div className="logoWrapper">
@@ -12,7 +12,7 @@ export const Navbar = () => {
 				</Link>
 			</div>
 			<div className="searchBar">
-				<SearchComponent />
+				<SearchComponent handleChange={handleChange} />
 			</div>
 			<div className="BackButtonWrapper">
 				<Link to="/">Home/Back</Link>
