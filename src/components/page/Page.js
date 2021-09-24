@@ -4,24 +4,31 @@ import { Navbar } from '../navbar/Navabar';
 import { ArtistInfoContainer } from '../artist_info_container/ArtistInfoContainer';
 // import { Footer }
 import { fetchArtist, fetchEvents } from '../../apiCalls';
+import { ConcertContainer } from '../concert_container/ConcertContainer';
 
 export const Page = () => {
-	const [artistInfo, setArtistInfo] = useState({});
-	const [eventInfo, setEventInfo] = useState({});
-	const [error, setError] = useState('');
+  const [artistInfo, setArtistInfo] = useState({});
+  const [concerts, setConcerts] = useState([]);
+  const [artistError, setArtistError] = useState('');
+  const [concertsError, setConcertsError] = useState('');
 
-	const handleChange = (artist) => {
-		fetchArtist(artist)
-			.then((data) => setArtistInfo(data))
-			.catch((err) => setError(err.message));
-	};
+  const handleChange = (artist) => {
+    fetchArtist(artist)
+      .then((data) => setArtistInfo(data))
+      .catch((err) => setArtistError(err.message));
+    fetchEvents(artist)
+      // .then((data) => console.log(data))
+      .then((data) => setConcerts(data))
+      .catch((err) => setConcertsError(err.message));
+  };
 
-	return (
-		<div className="App">
-			{/* {console.log(artistInfo)}x */}
-			<Navbar handleChange={handleChange} />
-			<ArtistInfoContainer artistInfo={artistInfo} />
-			{/* <Footer /> */}
-		</div>
-	);
+  return (
+    <div className="App">
+      {/* {console.log(artistInfo)}x */}
+      <Navbar handleChange={handleChange} />
+      <ArtistInfoContainer artistInfo={artistInfo} />
+      <ConcertContainer concerts={concerts} />
+      {/* <Footer /> */}
+    </div>
+  );
 };
