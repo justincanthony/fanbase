@@ -1,18 +1,20 @@
 .artistInfoContainer {
-  height: 20vh;
+  height: 35vh;
   width: 100%;
   display: flex;
   flex-direction: row;
 }
 
 img {
-  width: 100%;
-  object-fit: content;
+ height: 100%
 }
-.bandImageWrapper {
-  width: 50%;
-}
+
+
 
 .artistName {
   text-align: center;
+}
+
+.artistDetails {
+
 }
