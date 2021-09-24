@@ -5,6 +5,7 @@ import { ArtistInfoContainer } from '../artist_info_container/ArtistInfoContaine
 // import { Footer }
 import { fetchArtist, fetchEvents } from '../../apiCalls';
 import { ConcertContainer } from '../concert_container/ConcertContainer';
+import { SavedEventsContainer } from '../saved_events_container/SavedEventsContainer';
 
 export const Page = () => {
   const [artistInfo, setArtistInfo] = useState({});
@@ -30,6 +31,7 @@ export const Page = () => {
       <section className="pageContainer">
         <ArtistInfoContainer artistInfo={artistInfo} />
         <ConcertContainer concerts={concerts} />
+        <SavedEventsContainer />
       </section>
       {/* <Footer /> */}
     </main>
