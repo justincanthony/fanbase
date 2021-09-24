@@ -1,4 +1,5 @@
 import React from 'react';
+import dayjs from 'dayjs';
 import './ConcertCard.css';
 
 export const ConcertCard = ({ concert, handle }) => {
@@ -8,12 +9,12 @@ export const ConcertCard = ({ concert, handle }) => {
 
   return (
     <article className="concertCard" id={concert.id} concert={concert}>
-      {concert.datetime}
+      {dayjs(concert.datetime).format('MM/DD/YYYY // h:m')} //
       {concert.venue.name}
-      {concert.title}
+      {concert.title}//
       {concert.venue.location}
       <button
-        className="attendShow"
+        className="attendShowButton"
         type="submit"
         onClick={() => handleClick(concert)}
       >
