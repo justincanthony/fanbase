@@ -23,12 +23,14 @@ export const Page = () => {
   };
 
   return (
-    <div className="App">
+    <main className="main">
       {/* {console.log(artistInfo)}x */}
       <Navbar handleChange={handleChange} />
-      <ArtistInfoContainer artistInfo={artistInfo} />
-      <ConcertContainer concerts={concerts} />
+      <section className="pageContainer">
+        <ArtistInfoContainer artistInfo={artistInfo} />
+        <ConcertContainer concerts={concerts} />
+      </section>
       {/* <Footer /> */}
-    </div>
+    </main>
   );
 };
