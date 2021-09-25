@@ -19,11 +19,18 @@ img {
 .artistDetails {
 display: flex;
 flex-direction: column;
-justify-content: center; 
+justify-content: center;
+margin: 0;
 }
 
 .artistName {
   text-align: center;
+  font-size: 5.5em;
+  margin: 0;
+}
+
+.artistLinks li {
+margin: 0;
 }
 
 
