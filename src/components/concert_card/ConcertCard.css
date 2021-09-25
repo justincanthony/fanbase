@@ -1,18 +1,22 @@
 .concertCard {
   height: auto;
-  width: 80%;
+  width: 50%;
   background-color:rgb(112, 164, 240);
   border-radius: 5px;
   margin: 5px;
   word-wrap: normal;
   text-align: center;
-  color:dimgrey
+  color:dimgrey;
 }
 
 .attendShowButton {
   border: none;
   margin-top: 2px;
-  margin-bottom: 3px;
+  margin-bottom: 5px;
   color:dimgrey;
   border-radius: 5px;
+}
+
+.location, .date, .venue, .title {
+  margin: 0;
 }

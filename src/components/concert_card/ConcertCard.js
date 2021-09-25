@@ -9,10 +9,12 @@ export const ConcertCard = ({ concert, handle }) => {
 
   return (
     <article className="concertCard" id={concert.id} concert={concert}>
-      {dayjs(concert.datetime).format('MM/DD/YYYY // h:m')} //
-      {concert.venue.name}
-      {concert.title}//
-      {concert.venue.location}
+      <p className="date">
+        {dayjs(concert.datetime).format('MM/DD/YYYY   h:m')}
+      </p>
+      <p className="venue">{concert.venue.name}</p>
+      <p className="title">{concert.title}</p>
+      <p className="location">{concert.venue.location}</p>
       <button
         className="attendShowButton"
         type="submit"
