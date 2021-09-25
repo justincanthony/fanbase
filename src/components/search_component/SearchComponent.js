@@ -10,17 +10,24 @@ export const SearchComponent = ({ handleChange }) => {
   };
 
   return (
-    <div className="searchBar">
+    <div className="searchContainer">
       <form>
         <input
+          className="searchInput"
           type="text"
           placeholder="artist name"
           value={artist}
           onChange={(e) => setArtist(e.target.value)}
         />
-        <button type="submit" onClick={(e) => handleSubmit(e)}>
-          Search
-        </button>
+        <div className="submitContainer">
+          <button
+            className="submitButton"
+            type="submit"
+            onClick={(e) => handleSubmit(e)}
+          >
+            Search
+          </button>
+        </div>
       </form>
     </div>
   );
