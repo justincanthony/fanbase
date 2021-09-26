@@ -35,7 +35,11 @@ export const Page = () => {
           path="/saved_events"
           render={({ match }) => {
             const { params } = match;
-            return <SavedEventsContainer />;
+            return (
+              <section className="pageContainer">
+                <SavedEventsContainer />
+              </section>
+            );
           }}
         ></Route>
         <Route render={() => <ErrorMessage message={'Page Not Found'} />} />
