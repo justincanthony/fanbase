@@ -7,6 +7,7 @@ import { Route, Switch } from 'react-router-dom';
 import { WelcomeContainer } from '../welcome_container/WelcomeContainer';
 import { ConcertContainer } from '../concert_container/ConcertContainer';
 import { SavedEventsContainer } from '../saved_events_container/SavedEventsContainer';
+import { ErrorMessage } from '../error_message/ErrorMessage';
 
 export const Page = () => {
   return (
@@ -37,6 +38,7 @@ export const Page = () => {
             return <SavedEventsContainer />;
           }}
         ></Route>
+        <Route render={() => <ErrorMessage message={'Page Not Found'} />} />
       </Switch>
       {/* <Footer /> */}
     </main>
