@@ -1,9 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import './SavedEventsContainer.css';
-import { ConcertCard } from '../concert_card/ConcertCard';
-
+import { EventCard } from '../event_card/EventCard';
 export const SavedEventsContainer = () => {
   const [savedConcerts, setSavedConcerts] = useState([]);
+
+  const deleteShow = (id) => {
+    const filteredConcerts = savedConcerts.filter(
+      (concert) => concert.id !== id
+    );
+    setSavedConcerts(filteredConcerts);
+    localStorage.removeItem(id);
+  };
 
   const getFromStorage = () => {
     const keys = Object.keys(localStorage);
@@ -19,7 +26,7 @@ export const SavedEventsContainer = () => {
   }, []);
 
   const savedEvents = savedConcerts.map((concert) => (
-    <ConcertCard key={concert.id} concert={concert} />
+    <EventCard key={concert.id} concert={concert} deleteShow={deleteShow} />
   ));
 
   return (
