@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Switch, Route } from 'react-router-dom';
 import './Page.css';
 import { Navbar } from '../navbar/Navabar';
 import { ArtistInfoContainer } from '../artist_info_container/ArtistInfoContainer';
@@ -54,3 +53,50 @@ export const Page = () => {
     </main>
   );
 };
+
+// **************** Original Setup *******************
+
+// export const Page = () => {
+//   const [artistInfo, setArtistInfo] = useState({});
+//   const [concerts, setConcerts] = useState([]);
+//   const [artistError, setArtistError] = useState('');
+//   const [concertsError, setConcertsError] = useState('');
+
+//   const handleChange = (artist) => {
+//     fetchArtist(artist)
+//       .then((data) => setArtistInfo(data))
+//       // .then((data) => console.log(data))
+//       .catch((err) => setArtistError(err.message));
+//     fetchEvents(artist)
+//       // .then((data) => console.log(data))
+//       .then((data) => setConcerts(data))
+//       .catch((err) => setConcertsError(err.message));
+//   };
+
+//   return (
+//     <main className="main">
+//       <Navbar handleChange={handleChange} />
+//       <Switch>
+//         <Route exact path="/">
+//           <WelcomeContainer />
+//         </Route>
+//         <Route
+//           exact
+//           path="/artists/:artist"
+//           render={({ match }) => {
+//             console.log(match);
+//             const { params } = match;
+//             return (
+//               <section className="pageContainer">
+//                 <ArtistInfoContainer artistInfo={artistInfo} />
+//                 <ConcertContainer concerts={concerts} />
+//               </section>
+//             );
+//           }}
+//         ></Route>
+//         {/* <SavedEventsContainer /> */}
+//       </Switch>
+//       {/* <Footer /> */}
+//     </main>
+//   );
+// };
