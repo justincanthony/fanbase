@@ -15,7 +15,7 @@ export const Navbar = () => {
         <SearchComponent />
       </div>
       <div className="BackButtonWrapper">
-        {/* <Link to="/">Home/Back</Link> */}
+        <Link to="/saved_events">Saved Events</Link>
       </div>
     </header>
   );
