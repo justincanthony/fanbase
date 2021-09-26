@@ -33,8 +33,7 @@ export const Page = () => {
         <Route
           exact
           path="/saved_events"
-          render={({ match }) => {
-            const { params } = match;
+          render={() => {
             return (
               <section className="pageContainer">
                 <SavedEventsContainer />
