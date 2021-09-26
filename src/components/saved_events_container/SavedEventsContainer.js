@@ -24,6 +24,7 @@ export const SavedEventsContainer = () => {
 
   return (
     <section className="savedConcertContainer">
+      <h3>Saved Events</h3>
       {savedEvents && savedEvents}
     </section>
   );
