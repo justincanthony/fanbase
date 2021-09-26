@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './SearchComponent.css';
 
 export const SearchComponent = ({ handleChange }) => {
@@ -10,17 +11,26 @@ export const SearchComponent = ({ handleChange }) => {
   };
 
   return (
-    <div className="searchBar">
+    <div className="searchContainer">
       <form>
         <input
+          className="searchInput"
           type="text"
           placeholder="artist name"
           value={artist}
           onChange={(e) => setArtist(e.target.value)}
         />
-        <button type="submit" onClick={(e) => handleSubmit(e)}>
-          Search
-        </button>
+        <div className="submitContainer">
+          <Link to={`/artists/${artist}`}>
+            <button
+              className="submitButton"
+              type="submit"
+              onClick={(e) => handleSubmit(e)}
+            >
+              Search
+            </button>
+          </Link>
+        </div>
       </form>
     </div>
   );

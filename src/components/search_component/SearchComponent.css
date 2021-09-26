@@ -1,0 +1,17 @@
+.searchContainer {
+  display: flex;
+}
+
+.searchInput {
+  border: none;
+}
+
+.submitContainer {
+  
+}
+.searchButton {
+  border: none;
+  justify-self: center;
+  border-radius: 5px;
+  align-self: center;
+}
