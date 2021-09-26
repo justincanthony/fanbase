@@ -16,7 +16,7 @@ export const ConcertContainer = ({ artist }) => {
 
   useEffect(() => {
     getConcertInfo(artist);
-  }, []);
+  }, [concerts]);
 
   const concertCards = concerts.map((concert) => {
     return <ConcertCard key={concert.id} concert={concert} />;
