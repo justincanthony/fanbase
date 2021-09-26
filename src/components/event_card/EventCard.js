@@ -3,11 +3,6 @@ import './EventCard.css';
 import dayjs from 'dayjs';
 
 export const EventCard = ({ concert, deleteShow }) => {
-  console.log(concert);
-  const handleClick = (concert) => {
-    localStorage.removeItem(concert.id);
-  };
-
   return (
     <article className="eventCard" id={concert.id} concert={concert}>
       <p className="date">
