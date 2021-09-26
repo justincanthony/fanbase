@@ -15,7 +15,7 @@ export const ArtistInfoContainer = ({ artist }) => {
 
   useEffect(() => {
     getArtistInfo(artist);
-  }, []);
+  }, [artistInfo]);
 
   const { id, facebook_page_url, name, image_url, url } = artistInfo;
 
