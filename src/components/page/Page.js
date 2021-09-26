@@ -16,6 +16,7 @@ export const Page = () => {
   const handleChange = (artist) => {
     fetchArtist(artist)
       .then((data) => setArtistInfo(data))
+      // .then((data) => console.log(data))
       .catch((err) => setArtistError(err.message));
     fetchEvents(artist)
       // .then((data) => console.log(data))
@@ -25,12 +26,11 @@ export const Page = () => {
 
   return (
     <main className="main">
-      {/* {console.log(artistInfo)}x */}
       <Navbar handleChange={handleChange} />
       <section className="pageContainer">
         <ArtistInfoContainer artistInfo={artistInfo} />
         <ConcertContainer concerts={concerts} />
-        <SavedEventsContainer />
+        {/* <SavedEventsContainer /> */}
       </section>
       {/* <Footer /> */}
     </main>
