@@ -6,5 +6,10 @@ export const ConcertContainer = ({ concerts }) => {
   const concertCards = concerts.map((concert) => {
     return <ConcertCard key={concert.id} concert={concert} />;
   });
-  return <section className="concertContainer">{concertCards}</section>;
+  return (
+    <section className="concertContainer">
+      <h3>Upcoming Events</h3>
+      {concertCards}
+    </section>
+  );
 };
