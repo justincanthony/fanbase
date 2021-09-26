@@ -1,6 +1,6 @@
 import React from 'react';
 import './Page.css';
-import { Navbar } from '../navbar/Navabar';
+import { Navbar } from '../navbar/Navbar';
 import { ArtistInfoContainer } from '../artist_info_container/ArtistInfoContainer';
 // import { Footer }
 import { Route, Switch } from 'react-router-dom';
