@@ -29,7 +29,14 @@ export const Page = () => {
             );
           }}
         ></Route>
-        {/* <SavedEventsContainer /> */}
+        <Route
+          exact
+          path="/saved_events"
+          render={({ match }) => {
+            const { params } = match;
+            return <SavedEventsContainer />;
+          }}
+        ></Route>
       </Switch>
       {/* <Footer /> */}
     </main>
