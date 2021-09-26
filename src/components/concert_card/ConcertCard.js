@@ -2,7 +2,7 @@ import React from 'react';
 import dayjs from 'dayjs';
 import './ConcertCard.css';
 
-export const ConcertCard = ({ concert, handle }) => {
+export const ConcertCard = ({ concert }) => {
   const handleClick = (concert) => {
     localStorage.setItem(concert.id, JSON.stringify(concert));
   };
