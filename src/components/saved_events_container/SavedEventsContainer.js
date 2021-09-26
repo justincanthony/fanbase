@@ -19,7 +19,7 @@ export const SavedEventsContainer = () => {
   }, []);
 
   const savedEvents = savedConcerts.map((concert) => (
-    <ConcertCard key={concert} concert={concert} />
+    <ConcertCard key={concert.id} concert={concert} />
   ));
 
   return (
