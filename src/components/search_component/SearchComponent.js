@@ -1,13 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './SearchComponent.css';
 
-export const SearchComponent = ({ handleChange }) => {
+export const SearchComponent = () => {
   const [artist, setArtist] = useState('');
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    handleChange(artist);
+  const clearInput = (e) => {
+    setArtist('');
   };
 
   return (
@@ -20,18 +19,18 @@ export const SearchComponent = ({ handleChange }) => {
           value={artist}
           onChange={(e) => setArtist(e.target.value)}
         />
-        <div className="submitContainer">
-          <Link to={`/artists/${artist}`}>
-            <button
-              className="submitButton"
-              type="submit"
-              onClick={(e) => handleSubmit(e)}
-            >
-              Search
-            </button>
-          </Link>
-        </div>
       </form>
+      <div className="submitContainer">
+        <Link to={`/artists/${artist}`}>
+          <button
+            className="submitButton"
+            type="submit"
+            onClick={(e) => clearInput(e)}
+          >
+            Search
+          </button>
+        </Link>
+      </div>
     </div>
   );
 };
