@@ -18,7 +18,7 @@ Websites
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Project][turing-shield]][project-spec-url] 
-[![Issues][issues-shield]][issues-url] 
+
 
 <!-- CHANGE THESE VARIABLES TO YOUR OWN PROJECT SPECIFIC PAGE 
 "URL-Hosting-Site" , REPO-NAME , issues-url, project-spec-url, contributors-url, contributors-shield
