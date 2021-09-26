@@ -8,10 +8,10 @@ export const SavedEventsContainer = () => {
   const getFromStorage = () => {
     const keys = Object.keys(localStorage);
     let savedEvents;
-    if (keys.length) {
+    if (keys.length > 0) {
       savedEvents = keys.map((key) => JSON.parse(localStorage.getItem(key)));
+      setSavedConcerts([...savedEvents]);
     }
-    setSavedConcerts([...savedEvents]);
   };
 
   useEffect(() => {
