@@ -3,6 +3,8 @@ import './Page.css';
 import { Navbar } from '../navbar/Navabar';
 import { ArtistInfoContainer } from '../artist_info_container/ArtistInfoContainer';
 // import { Footer }
+import { Route, Switch } from 'react-router-dom';
+import { WelcomeContainer } from '../welcome_container/WelcomeContainer';
 import { fetchArtist, fetchEvents } from '../../apiCalls';
 import { ConcertContainer } from '../concert_container/ConcertContainer';
 import { SavedEventsContainer } from '../saved_events_container/SavedEventsContainer';
@@ -27,11 +29,26 @@ export const Page = () => {
   return (
     <main className="main">
       <Navbar handleChange={handleChange} />
-      <section className="pageContainer">
-        <ArtistInfoContainer artistInfo={artistInfo} />
-        <ConcertContainer concerts={concerts} />
+      <Switch>
+        <Route exact path="/">
+          <WelcomeContainer />
+        </Route>
+        <Route
+          exact
+          path="/artists/:artist"
+          render={({ match }) => {
+            console.log(match);
+            const { params } = match;
+            return (
+              <section className="pageContainer">
+                <ArtistInfoContainer artistInfo={artistInfo} />
+                <ConcertContainer concerts={concerts} />
+              </section>
+            );
+          }}
+        ></Route>
         {/* <SavedEventsContainer /> */}
-      </section>
+      </Switch>
       {/* <Footer /> */}
     </main>
   );
