@@ -84,12 +84,13 @@ The user needed th abilty to store or manipulate the data such as favorting, sav
 The user also had to be able to navigate multiple views handled by router.
 
 ### Built With
-      
-* [React/Hooks](https://reactjs.org/docs/hooks-intro.html)
-* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
-* [Normalize](https://necolas.github.io/normalize.css/)
-* [React Router](https://reactrouter.com/)
-* [Cypress](https://docs.cypress.io/guides/overview/why-cypress)
+
+
+[![React Hooks][react-hooks-shield]][react-hooks-url]
+[![React Router][react-router-shield]][react-router-url]
+[![NPM][npm-sheild]][npm-url]
+[![Cypress Sheild][cypress-sheild]][cypress-url]
+[![Visual Studio Code][visual-studio-code-sheild]][visual-studio-code-url]
 
 
 <!-- GETTING STARTED -->
@@ -158,12 +159,21 @@ Contributions are what make the open source community such an amazing place to b
 
 <a class="u-email Link--primary " href="mailto:justincanthony@gmail.com">justincanthony@gmail.com</a>
 
-
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[project-spec-url]: https://frontend.turing.edu/projects/module-1/m1-static-comp
+[project-spec-url]: https://frontend.turing.edu/projects/module-3/showcase.html
 [turing-shield]: https://img.shields.io/badge/Project%20-Spec-blue
 [contributors-shield]: https://img.shields.io/badge/Contributors-1-blue
 [contributors-url]: https://github.com/justincanthony/fanbase/graphs/contributors
 [issues-shield]: https://img.shields.io/badge/Issues-1-blue
 [issues-url]: https://github.com/justincanthony/fanbase/issues
+[react-hooks-shield]: https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB
+[react-hooks-url]: https://reactjs.org/docs/hooks-intro.html
+[react-router-shield]: https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white
+[react-router-url]: https://reactrouter.com/
+[npm-sheild]: https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white
+[npm-url]: https://www.npmjs.com/
+[cypress-sheild]: https://img.shields.io/badge/-cypress-%23E5E5E5?style=for-the-badge&logo=cypress&logoColor=058a5e
+[cypress-url]: https://docs.cypress.io/guides/overview/why-cypress
+[visual-studio-code-sheild]: https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white
+[visual-studio-code-url]: https://code.visualstudio.com/
