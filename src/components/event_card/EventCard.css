@@ -17,6 +17,10 @@
   border-radius: 5px;
 }
 
-.location, .date, .venue, .title {
+.location, .date, .venue, .title, .lineUp {
   margin: 0;
+}
+
+.lineUp {
+  font-weight: bold;
 }
