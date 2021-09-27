@@ -20,3 +20,9 @@
 .location, .date, .venue, .title {
   margin: 0;
 }
+
+.artistName {
+  font-size: 16pt;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
