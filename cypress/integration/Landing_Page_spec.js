@@ -34,6 +34,7 @@ describe('Application Landing Page', () => {
         image_url: 'https://photos.bandsintown.com/large/9062513.jpeg',
       }
     );
+    cy.visit('http://localhost:3000');
     cy.get('input.searchInput')
       .type('Baroness')
       .get('button.submitButton')
@@ -42,5 +43,24 @@ describe('Application Landing Page', () => {
       .should('include', 'artists/Baroness')
       .get('section.artistInfoContainer')
       .contains('Baroness');
+  });
+  it('Should be able to click on the view saved events button and view any concerts that have been saved', () => {
+    cy.get('a.savedEventsButton')
+      .click()
+      .url()
+      .should('include', '/saved_events');
+  });
+  it('Should display an error message if user searches for an artist that does not exist', () => {
+    cy.get('input.searchInput')
+      .type('Barortggrs')
+      .get('button.submitButton')
+      .click()
+      .get('section.concertContainer')
+      .get('h3')
+      .contains('Artist name "Barortggrs" does not exist');
+  });
+  it('Should should display an error page if the user types in a bad url path', () => {
+    cy.visit('http://localhost:3000/nopeidontexist');
+    cy.get('div.errorDisplay').get('h3').contains('Page Not Found');
   });
 });
