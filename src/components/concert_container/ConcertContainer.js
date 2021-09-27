@@ -26,7 +26,9 @@ export const ConcertContainer = ({ artist }) => {
       return <ConcertCard key={concert.id} concert={concert} artist={artist} />;
     });
   } else {
-    concertCards = <ErrorMessage message={'Nothing To See Here'} />;
+    concertCards = (
+      <ErrorMessage message={`Artist name "${artist}" does not exist`} />
+    );
   }
 
   // const concertCards = concerts.map((concert) => {

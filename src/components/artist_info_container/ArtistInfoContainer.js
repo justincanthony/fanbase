@@ -6,15 +6,15 @@ export const ArtistInfoContainer = ({ artist }) => {
   const [artistInfo, setArtistInfo] = useState({});
   const [isLoading, setIsLoading] = useState(true);
 
-  const getArtistInfo = () => {
+  const getArtistInfo = (artist) => {
     fetchArtist(artist).then((data) => setArtistInfo(data));
-    // .then((data) => console.log(data))
+    // .then((data) => console.log(data));
   };
 
   useEffect(() => {
     getArtistInfo(artist);
     setIsLoading(false);
-  }, [artistInfo]);
+  }, [artist]);
 
   const { facebook_page_url, name, image_url, url } = artistInfo;
 
