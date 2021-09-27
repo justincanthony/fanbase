@@ -1,29 +1,28 @@
 import React, { useState, useEffect } from 'react';
 import { fetchArtist } from '../../apiCalls';
-import { ErrorMessage } from '../error_message/ErrorMessage';
 import './ArtistInfoContainer.css';
 
 export const ArtistInfoContainer = ({ artist }) => {
   const [artistInfo, setArtistInfo] = useState({});
-  const [artistError, setArtistError] = useState('');
+  const [isLoading, setIsLoading] = useState(true);
 
   const getArtistInfo = () => {
-    fetchArtist(artist)
-      .then((data) => setArtistInfo(data))
-      // .then((data) => console.log(data))
-      .catch((err) => setArtistError(err.message));
+    fetchArtist(artist).then((data) => setArtistInfo(data));
+    // .then((data) => console.log(data))
   };
 
   useEffect(() => {
     getArtistInfo(artist);
+    setIsLoading(false);
   }, [artistInfo]);
 
-  const { id, facebook_page_url, name, image_url, url } = artistInfo;
+  const { facebook_page_url, name, image_url, url } = artistInfo;
 
   return (
     <>
       {!artistInfo && <React.Fragment />}
-      {artistInfo && (
+      {artistInfo && isLoading && <p>Loading...</p>}
+      {artistInfo && !isLoading && (
         <section className="artistInfoContainer">
           <div className="bandImageWrapper">
             <img src={image_url} alt="Band" />
