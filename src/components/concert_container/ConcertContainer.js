@@ -23,7 +23,7 @@ export const ConcertContainer = ({ artist }) => {
   let concertCards;
   if (concerts.length > 0) {
     concertCards = concerts.map((concert) => {
-      return <ConcertCard key={concert.id} concert={concert} />;
+      return <ConcertCard key={concert.id} concert={concert} artist={artist} />;
     });
   } else {
     concertCards = <ErrorMessage message={'Nothing To See Here'} />;
