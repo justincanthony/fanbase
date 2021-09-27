@@ -12,3 +12,44 @@
 	align-items: center;
 	/* justify-content: center; */
 }
+
+.backButtonWrapper {
+	display: flex;
+	align-items: center;
+}
+
+.backButtonWrapper a {
+	text-decoration: none;
+	color: black;
+}
+
+.backButtonWrapper a:hover {
+cursor: pointer;
+}
+
+.logoWrapper {
+	display: flex;
+	align-items: center;
+}
+
+.logoWrapper a {
+	text-decoration: none;
+	color: black;
+}
+
+.searchInput {
+	border: none;
+	border-radius: 5px;
+	color: dimgrey;
+}
+
+.submitButton {
+	margin-top: 10px;
+	border: none;
+	border-radius: 5px;
+	color: dimgrey;
+}
+
+.submitButton:hover {
+cursor: pointer
+}

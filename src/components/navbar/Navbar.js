@@ -14,8 +14,8 @@ export const Navbar = () => {
       <div className="searchBar">
         <SearchComponent />
       </div>
-      <div className="BackButtonWrapper">
-        <Link to="/saved_events">Saved Events</Link>
+      <div className="backButtonWrapper">
+        <Link to="/saved_events">View Saved Events</Link>
       </div>
     </header>
   );
