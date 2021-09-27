@@ -56,6 +56,7 @@ describe('Application Landing Page', () => {
       .get('button.submitButton')
       .click()
       .get('section.concertContainer')
+      .get('div.errorDisplay')
       .get('h3')
       .contains('Artist name "Barortggrs" does not exist');
   });
