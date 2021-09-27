@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import './ConcertContainer.css';
 import { fetchEvents } from '../../apiCalls';
 import { ConcertCard } from '../concert_card/ConcertCard';
+// import { useHistory } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
+import { ErrorMessage } from '../error_message/ErrorMessage';
 
 export const ConcertContainer = ({ artist }) => {
   const [concerts, setConcerts] = useState([]);
@@ -10,17 +13,26 @@ export const ConcertContainer = ({ artist }) => {
   const getConcertInfo = (artist) => {
     fetchEvents(artist)
       .then((data) => setConcerts(data))
-      // .then((data) => console.log(data))
       .catch((err) => setConcertsError(err.message));
   };
 
   useEffect(() => {
     getConcertInfo(artist);
-  }, [concerts]);
+  }, [artist]);
 
-  const concertCards = concerts.map((concert) => {
-    return <ConcertCard key={concert.id} concert={concert} />;
-  });
+  let concertCards;
+  if (concerts.length > 0) {
+    concertCards = concerts.map((concert) => {
+      return <ConcertCard key={concert.id} concert={concert} />;
+    });
+  } else {
+    concertCards = <ErrorMessage message={'Nothing To See Here'} />;
+  }
+
+  // const concertCards = concerts.map((concert) => {
+  //   return <ConcertCard key={concert.id} concert={concert} notify={notify} />;
+  // });
+
   return (
     <section className="concertContainer">
       <h3>Upcoming Events</h3>
