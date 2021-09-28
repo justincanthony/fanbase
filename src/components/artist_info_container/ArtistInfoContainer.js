@@ -45,8 +45,8 @@ const ArtistInfoContainer = ({ artist }) => {
   );
 };
 
-ArtistInfoContainer.propTypes = {
-  artist: PropTypes.number.isRequired,
-};
-
 export default ArtistInfoContainer;
+
+ArtistInfoContainer.propTypes = {
+  artist: PropTypes.string,
+};
