@@ -29,7 +29,7 @@ https://github.com/justincanthony -->
 
   <h1 align="center">FanBase</h1>
 
-  <p align="center">Discover Where Your Favorite Band Is Playing Next
+  <p align="center">Connecting Fans to Bands
     <br />
     <a href=https://github.com/justincanthony/fanbase><strong>Explore the docs »</strong></a>
     <br />
@@ -130,12 +130,12 @@ Should the user wish to view their saved events, they can simply click on the vi
 
 If the user would like ot return to the previous page, they can use the back button, or if the user would like to return home, they can click on the logo.
                           
-<!-- Screen Size EXAMPLES 
+Screen Size EXAMPLES 
 
-Original Spec              |  Recreation
+Mobile Spec              |  Desktop Spec
 :----------------------------:|:-------------------------:
-![Original](https://user-images.githubusercontent.com/82064981/126916095-4d8e2061-cc58-4c3e-8e62-b3cd00caceb3.png)|![Screen Shot 2021-07-25 at 5 05 28 PM](https://user-images.githubusercontent.com/82064981/126916200-a6aaf012-4920-484d-811e-d0f856b077c9.png)
--->
+![fanbase_mobile_gif](https://user-images.githubusercontent.com/82064981/135021383-8316da31-d8c7-4845-a05a-b8811ab5f61c.gif)|![fanbase_desktop_gif](https://user-images.githubusercontent.com/82064981/135021827-5e7c1674-117f-4267-af00-3dd649d1b41a.gif)
+
 
 
 <!-- ROADMAP -->
@@ -177,3 +177,5 @@ Contributions are what make the open source community such an amazing place to b
 [cypress-url]: https://docs.cypress.io/guides/overview/why-cypress
 [visual-studio-code-sheild]: https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white
 [visual-studio-code-url]: https://code.visualstudio.com/
+
+
