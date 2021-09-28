@@ -9,7 +9,6 @@ const ArtistInfoContainer = ({ artist }) => {
 
   const getArtistInfo = (artist) => {
     fetchArtist(artist).then((data) => setArtistInfo(data));
-    // .then((data) => console.log(data));
   };
 
   useEffect(() => {
