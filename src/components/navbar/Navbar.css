@@ -1,6 +1,5 @@
 .navbar {
-	height: 20vh;
-	/* width: 100%; */
+	height: 100px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
@@ -10,7 +9,6 @@
 .searchBar {
 	display: flex;
 	align-items: center;
-	/* justify-content: center; */
 }
 
 .saveButtonWrapper {
@@ -32,6 +30,10 @@ cursor: pointer;
 	align-items: center;
 }
 
+.logoWrapper h1 {
+	margin: 10px 10px 5px 10px;
+}
+
 .logoWrapper a {
 	text-decoration: none;
 	color: black;
@@ -41,6 +43,8 @@ cursor: pointer;
 	border: none;
 	border-radius: 5px;
 	color: dimgrey;
+	text-align: center;
+	height: 20px;
 }
 
 .submitButton {
@@ -52,4 +56,13 @@ cursor: pointer;
 
 .submitButton:hover {
 cursor: pointer
+}
+
+@media screen and (max-width: 509px) {
+	.navbar {
+		height: 150px;
+		flex-direction: column;
+		align-items: center;
+	}
+	
 }
