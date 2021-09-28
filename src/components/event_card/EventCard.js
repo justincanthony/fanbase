@@ -3,7 +3,6 @@ import './EventCard.css';
 import dayjs from 'dayjs';
 
 export const EventCard = ({ concert, deleteShow }) => {
-  console.log(concert, 'here');
   return (
     <article className="eventCard" id={concert.id} concert={concert}>
       <p className="lineUp">{concert.lineup[0].toUpperCase()}</p>
