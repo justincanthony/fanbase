@@ -84,6 +84,6 @@ describe('Band Page Display', () => {
       .get('section.concertContainer')
       .get('div.errorDisplay')
       .get('h3')
-      .contains('Artist name "Barortggrs" does not exist');
+      .contains('There are no results for this artist');
   });
 });
