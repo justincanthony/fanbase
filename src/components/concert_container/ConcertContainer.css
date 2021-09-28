@@ -4,5 +4,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* background-image: url(../welcome_container/IMG_0477.jpeg); */
+  background-repeat: no-repeat;
+  background-size:cover;
+  opacity: 90%;
   background-color: rgb(233, 245, 241);
 }

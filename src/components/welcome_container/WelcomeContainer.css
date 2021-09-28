@@ -1,12 +1,28 @@
+
+
 .welcomeContainer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  height: 60vh;
+  height: 100vh;
   text-align: center;
-  background-color: rgb(233, 245, 241);
+  background-image: url(./IMG_0477.jpeg);
+  background-repeat: no-repeat;
+  background-size:cover;
+  opacity: 90%;
+  color:rgb(255, 255, 255);
 }
 
-h2 {
-  margin-top: 0;
+.welcomeMessage {
+  
+}
+
+
+.welcomeContainer h2 {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.welcomeContainer h3 {
+  margin-top: 3px;
+  margin-bottom: 0;
 }
