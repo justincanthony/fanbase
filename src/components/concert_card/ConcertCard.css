@@ -6,7 +6,6 @@
   margin: 5px;
   word-wrap: normal;
   text-align: center;
-  opacity: 90%;
   color:dimgrey;
 }
 
@@ -27,7 +26,6 @@
 .location, .date, .venue, .title {
   margin: 0;
   font-size: 8pt;
-  opacity: 100%;
   color:white;
 }
 
