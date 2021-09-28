@@ -27,7 +27,7 @@ export const ConcertContainer = ({ artist }) => {
     });
   } else {
     concertCards = (
-      <ErrorMessage message={`Artist name "${artist}" does not exist`} />
+      <ErrorMessage message={`There are no results for this artist`} />
     );
   }
 
