@@ -34,7 +34,7 @@ https://github.com/justincanthony -->
     <a href=https://github.com/justincanthony/fanbase><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://justincanthony.github.io/fanbase/">View Demo</a>
+    <a href="https://fanbase-app-project.herokuapp.com/">Deploy Link</a>
     ·
     <a href="https://github.com/justincanthony/fanbase/issues">Report Bug</a>
     ·
