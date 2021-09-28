@@ -6,7 +6,7 @@ export const EventCard = ({ concert, deleteShow }) => {
   console.log(concert, 'here');
   return (
     <article className="eventCard" id={concert.id} concert={concert}>
-      <p className="lineUp">{concert.lineup[0]}</p>
+      <p className="lineUp">{concert.lineup[0].toUpperCase()}</p>
       <p className="date">
         {dayjs(concert.datetime).format('MM/DD/YYYY   h:mm')}
       </p>
