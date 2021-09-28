@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { fetchArtist } from '../../apiCalls';
 import './ArtistInfoContainer.css';
+import PropTypes from 'prop-types';
 
-export const ArtistInfoContainer = ({ artist }) => {
+const ArtistInfoContainer = ({ artist }) => {
   const [artistInfo, setArtistInfo] = useState({});
   const [isLoading, setIsLoading] = useState(true);
 
@@ -43,3 +44,9 @@ export const ArtistInfoContainer = ({ artist }) => {
     </>
   );
 };
+
+ArtistInfoContainer.propTypes = {
+  artist: PropTypes.number.isRequired,
+};
+
+export default ArtistInfoContainer;
