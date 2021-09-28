@@ -8,9 +8,8 @@
 }
 
 img {
- height: 100%;
- border-radius: 50%;
-
+  height: 100%;
+  border-radius: 50%;
 }
 
 .bandImageWrapper {
@@ -43,3 +42,27 @@ margin: 0;
 }
 
 
+@media screen and (max-width: 465px) {
+
+  .artistInfoContainer {
+    /* height: 35vh; */
+    /* width: 50%; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* align-items: center; */
+  }
+
+
+  .bandImageWrapper {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  img {
+    height: 60%;
+    border-radius: 50%;
+  }
+}

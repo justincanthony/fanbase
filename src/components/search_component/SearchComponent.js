@@ -20,17 +20,15 @@ export const SearchComponent = () => {
           onChange={(e) => setArtist(e.target.value)}
         />
       </form>
-      <div className="submitContainer">
-        <Link to={`/artists/${artist}`}>
-          <button
-            className="submitButton"
-            type="submit"
-            onClick={(e) => clearInput(e)}
-          >
-            Search
-          </button>
-        </Link>
-      </div>
+      <Link to={`/artists/${artist}`}>
+        <button
+          className="submitButton"
+          type="submit"
+          onClick={(e) => clearInput(e)}
+        >
+          Search
+        </button>
+      </Link>
     </div>
   );
 };
