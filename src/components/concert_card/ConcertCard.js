@@ -10,7 +10,7 @@ export const ConcertCard = ({ concert, artist }) => {
 
   return (
     <article className="concertCard" id={concert.id} concert={concert}>
-      <p className="artistName">{artist}</p>
+      <p className="artistName">{artist.toUpperCase()}</p>
       <p className="date">
         {dayjs(concert.datetime).format('MM/DD/YYYY   h:m')}
       </p>
