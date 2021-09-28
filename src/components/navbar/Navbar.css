@@ -3,7 +3,7 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
-	background-color: cornflowerblue;
+	background-color: black;
 }
 
 .searchBar {
@@ -18,11 +18,24 @@
 
 .saveButtonWrapper a {
 	text-decoration: none;
-	color: black;
+	color:blanchedalmond;
+	border: .5px solid blanchedalmond;
+	border-radius: 6px;
 }
 
 .saveButtonWrapper a:hover {
 cursor: pointer;
+color: white;
+background-color: rgb(48, 48, 48);
+}
+
+.savedEventsButton {
+	height: 25px;
+	width: 125px;
+	text-align: center;
+}
+.savedEventsButton p {
+	margin-top: 3px;
 }
 
 .logoWrapper {
@@ -32,6 +45,7 @@ cursor: pointer;
 
 .logoWrapper h1 {
 	margin: 10px 10px 5px 10px;
+	color: blanchedalmond;
 }
 
 .logoWrapper a {
@@ -55,7 +69,8 @@ cursor: pointer;
 }
 
 .submitButton:hover {
-cursor: pointer
+cursor: pointer;
+background-color: rgb(198, 197, 197)
 }
 
 @media screen and (max-width: 509px) {
