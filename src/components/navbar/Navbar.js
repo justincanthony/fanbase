@@ -16,7 +16,7 @@ export const Navbar = () => {
       </div>
       <div className="saveButtonWrapper">
         <Link to="/saved_events" className="savedEventsButton">
-          View Saved Events
+          <p>Saved Events</p>
         </Link>
       </div>
     </header>
