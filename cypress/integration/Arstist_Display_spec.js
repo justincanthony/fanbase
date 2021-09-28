@@ -44,7 +44,7 @@ describe('Band Page Display', () => {
       .should('include', '9062513');
     cy.get('section.artistInfoContainer').get('a').should('have.attr', 'href');
     cy.get('section.concertContainer').get('h3').contains('Upcoming Events');
-    cy.get('article.concertCard').get('p.artistName').contains('baroness');
+    cy.get('article.concertCard').get('p.artistName').contains('BARONESS');
   });
   it('Should be able to click on a concert card and have it saved for viewing later', () => {
     cy.get('article.concertCard')
