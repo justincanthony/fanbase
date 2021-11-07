@@ -61,14 +61,16 @@ margin: 0;
 
 
   .bandImageWrapper {
-    margin: 10px;
+    display: none;
+    /* margin: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; */
   }
 
   img {
-    height: 60%;
-    border-radius: 50%;
+    display: none;
+    /* height: 60%;
+    border-radius: 50%; */
   }
 }
