@@ -12,7 +12,7 @@
 
 img {
   height: 100%;
-  /* border-radius: 50%; */
+  border-radius: 50%;
 }
 
 .bandImageWrapper {
@@ -67,8 +67,8 @@ margin: 0;
     justify-content: center;
   }
 
-  /* img {
+  img {
     height: 60%;
     border-radius: 50%;
-  } */
+  }
 }
